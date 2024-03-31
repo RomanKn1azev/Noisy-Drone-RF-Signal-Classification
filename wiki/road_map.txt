@@ -1,0 +1,100 @@
+Структура проекта:
+config/
+	name/
+		labels/
+		models/
+		pipelines/
+		pipelines_params/
+
+data/
+	name/
+		raw/ - сырые данные (папка с файлами, csv и тп)
+		processed/ - обработанные (pt)
+		interim / - промежуточные (таблички и тп)
+
+enviroment/
+	requirements.txt
+	.yml ?
+
+logs/
+	name/
+		.log
+
+notebooks/
+	name/
+		.ipynb
+
+results/
+	name/
+		data/
+		models/
+		metrics/
+		
+		
+
+saved_object/
+	name/
+		models/
+			checkpoints/
+			pth/
+			onnx/
+		visualization/
+			data/
+			metrics/
+			model/
+		
+		
+
+sh
+	name/
+		.sh
+
+src/
+	data/
+		data_loader.py
+		dataset.py
+	utils/
+		loading/
+			data.py
+			model.py
+			
+		saving/
+			data.py
+			model.py
+			
+		visualization/
+			data.py
+			metrics.py
+			model.py
+		
+		file.py
+		arg_parser.py	
+		logger.py
+
+	models/
+		model_builder.py
+
+		cnn.py
+		rnn.py
+		
+
+	optimizer.py
+	criterion.py
+
+	pipeline.py
+
+	evaluation.py
+
+	learning/
+		supervised/
+			classification/
+				
+		unsupervised/
+		
+	testing.py
+
+
+
+.gitignore
+
+main.py

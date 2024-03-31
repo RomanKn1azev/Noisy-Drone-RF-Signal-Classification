@@ -1,0 +1,38 @@
+metrics:
+  - type: MulticlassAccuracy
+    params:
+      data_path:
+      save_path:
+      name:
+      type:
+      show: True
+
+  - type: MulticlassF1Score
+    params:
+        data_path:
+        average: micro
+        save_path:
+        name:
+        type:
+        show: True
+
+  - type: MulticlassRecall
+    params:
+      data_path:
+      save_path:
+      name:
+      type:
+      show: True
+
+  # - type: AUC
+
+  # - type: MulticlassAUROC
+  #   params:
+  #     num_classes: 7
+
+  # - type: MulticlassConfusionMatrix
+  #   params:
+  #     num_classes: 7
+  #     normalize: True
+  
+  # - type: MulticlassPrecisionRecallCurve

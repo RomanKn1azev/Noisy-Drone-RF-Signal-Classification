@@ -1,0 +1,1 @@
+LOGGING_CONFIG_FILE = "config/drones/logger/1.0.yml"

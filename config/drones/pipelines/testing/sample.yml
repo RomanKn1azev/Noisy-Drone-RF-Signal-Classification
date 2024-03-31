@@ -1,0 +1,33 @@
+random_state: 1
+device: gpu
+
+data:
+  path:
+
+model:
+  path: # jit model
+
+criterion:
+  type: CrossEntropyLoss
+
+
+metrics:
+  MulticlassAccuracy: 
+    num_classes: 7
+
+  AUC: {}
+
+  MulticlassAUROC:
+    num_classes: 7
+
+  MulticlassConfusionMatrix:
+    num_classes: 7
+    normalize: True
+  
+  MulticlassRecall: {}
+  
+  MulticlassPrecisionRecallCurve:
+    num_classes: 7
+
+  MulticlassF1Score:
+    num_classes: 7

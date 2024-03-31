@@ -1,0 +1,75 @@
+class_name: SpectrogramCNN
+
+blocks:
+  - name: block1
+    layers:
+      - type: Conv2d
+        name: Conv2d_1
+        params:
+          in_channels: 2
+          out_channels: 16
+          kernel_size: 3
+          stride: 1
+
+      - type: BatchNorm2d
+        name: BatchNorm2d_1
+        params:
+          num_features: 16
+
+      - type: ReLU
+        name: ReLU_1
+
+      - type: MaxPool2d
+        name: MaxPool2d_1
+        params:
+          kernel_size: 2
+          stride: 2
+
+  - name: block2
+    layers:
+      - type: Conv2d
+        name: Conv2d_1
+        params:
+          in_channels: 16
+          out_channels: 32
+          kernel_size: 3
+          stride: 1
+
+      - type: BatchNorm2d
+        name: BatchNorm2d_1
+        params:
+          num_features: 32
+
+      - type: ReLU
+        name: ReLU_1
+
+      - type: MaxPool2d
+        name: MaxPool2d_1     
+        params:
+          kernel_size: 2
+          stride: 2
+
+  - name: block3
+    layers:
+      - type: Flatten
+        name: Flatten_1
+      
+      - type: Linear
+        name: Linear_1
+        params:
+          in_features: 28800 # 93312 # 16 * 124
+          out_features: 256
+
+      - type: Sigmoid
+        name: Sigmoid_1
+
+      - type: Dropout
+        name: Dropout_1
+        params:
+          p: 0.2
+          
+      - type: Linear
+        name: Linear_2
+        params:
+          in_features: 256
+          out_features: 7

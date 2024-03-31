@@ -1,0 +1,1 @@
+python main.py -mode train -cfg config/drones/pipelines/training/sample.yml

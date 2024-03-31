@@ -1,0 +1,20 @@
+random_state: 1
+
+datasets:
+  config_path: config/name/datasets/example.yml
+
+  split:
+    size:
+      - 0.8
+      - 0.1
+      - 0.1
+
+    save:
+      - path:
+        name:
+
+      - path:
+        name:
+
+      - path:
+        name:

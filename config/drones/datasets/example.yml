@@ -1,0 +1,16 @@
+root_path:
+type_extract_data_func:
+
+# data_transform:
+#   type: DataTransform # name class in transform.py
+#   params:
+
+
+#   tensor_type: float64
+
+# target_transform:
+#   type: TargetTransform
+#   params:
+#       dictionary: config/name/labels/base.yml
+
+#       tensor_type: long

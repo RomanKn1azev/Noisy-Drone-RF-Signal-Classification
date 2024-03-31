@@ -1,0 +1,98 @@
+random_state: 1
+device: cuda
+
+data:
+  path: data/processed/spec.pt
+
+# valid_data:
+#     path:
+
+model_params: config/drones/models/sample_SpectrogramCNN.yml
+
+optimizer:
+  type: Adam
+  params:
+    lr: 0.001
+
+criterion:
+  type: CrossEntropyLoss
+
+
+
+fit:
+  batch_size: 8
+  # validation_batch_size: 8
+  # validation_freq: 1
+  epochs: 1
+  shuffle: True
+  # num_workers: 0
+  # class_weight:
+      # - 0.5
+      # - 0.5
+
+  # saving_onnx_params:
+  #   input_tensor_size:
+  #     - 1
+  #     - 2
+  #     - 128
+  #     - 128
+    
+  #   path: 
+  #   name: 
+  #   opset_version: 12
+
+  #   export_params: False 
+  #   input_names:
+  #     - Spectrogram
+
+  #   output_names:
+  #     - Grade Drones or Noise
+
+  # saving_pt_params:
+  #   path:
+  #   name:
+
+  saving_checkpoint_params:
+    path: saved_objects/test/models/checkpoints
+    name: pinpoint
+
+  # saving_jit_params:
+  #   path:
+  #   name:
+  
+
+
+
+
+
+
+
+
+
+
+
+  # metrics:
+#   accuracy: # MulticlassAccuracy: 
+#     num_classes: 7
+#     average: micro
+
+#   # auc: {}
+
+#   auroc: # MulticlassAUROC:
+#     num_classes: 7
+#     average: null
+
+#   # confusion_matrix: # MulticlassConfusionMatrix:
+#   #   num_classes: 7
+#   #   normalize: True
+  
+#   # recall: # MulticlassRecall:
+#   #   num_classes: 7
+#   #   average: micro
+  
+#   # precision_recall_curve: # MulticlassPrecisionRecallCurve:
+#   #   num_classes: 7
+
+#   # f1score: # MulticlassF1Score:
+#   #   num_classes: 7
+#   #   average: macro
